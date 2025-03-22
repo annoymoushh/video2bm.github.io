@@ -286,12 +286,13 @@
     </div>
     
   <!-- Example Training Data -->
-    <div class="columns is-centered">
+<!--     <div class="columns is-centered">
       <div class="container">
         <div class="content has-text-centered">
           <h2 class="title is-3"><strong>Example Training Data</strong></h2>
           <div class="box m-5">
             <div class="columns is-centered">
+              
               <!-- Human Video -->
               <div class="column is-half">
                 <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
@@ -308,11 +309,12 @@
                 </video>
                 <p><strong>Robot Video</strong></p>
               </div>
+              
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Example Training Data -->
     <!-- Paper video. -->
     <!-- <div class="columns is-centered has-text-centered">
@@ -330,70 +332,43 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Experiment Results -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Performance Results</h2>
-        <img src="./static/images/performance.png" alt="Performance Results" style="width:100%; max-width:1200px;">
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Generalization Results</h2>
-        <img src="./static/images/generalization.png" alt="Generalization Results" style="width:100%; max-width:1200px;">
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Scaling Law</h2>
-        <img src="./static/images/scalinglaw.png" alt="Scaling Law" style="width:100%; max-width:1200px;">
-      </div>
-    </div>
-    <!--/ Experiment Results -->
-  </div>
-</section>
-
-<!-- <section class="section"> -->
-  <!-- <div class="container is-max-desktop"> -->
 
     <!-- <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <!-- <div class="column">
+      <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
+          <h2 class="title is-3">Human Example</h2>
+<!--           <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+          </p> -->
+          <video id="human example" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/human_example.mp4"
                     type="video/mp4">
           </video>
         </div>
-      </div> -->
+      </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Matting</h2>
+      <div class="column">
+        <h2 class="title is-3">Robot Example</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
+<!--             <p>
               As a byproduct of our method, we can also solve the matting problem by ignoring
               samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
+            </p> -->
+            <video id="robot_example" controls playsinline height="100%">
+              <source src="./static/videos/robot_example.mp4"
                       type="video/mp4">
             </video>
           </div>
 
         </div>
-      </div> -->
-    <!-- </div> -->
+      </div> 
+    </div>
     <!--/ Matting. -->
 
     <!-- Animation. -->
@@ -461,7 +436,36 @@
     <!--/ Animation. -->
 
   <!-- </div> -->
-<!-- </section> -->
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Experiment Results -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Performance Results</h2>
+        <img src="./static/images/performance.png" alt="Performance Results" style="width:100%; max-width:1200px;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Generalization Results</h2>
+        <img src="./static/images/generalization.png" alt="Generalization Results" style="width:100%; max-width:1200px;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Scaling Law</h2>
+        <img src="./static/images/scalinglaw.png" alt="Scaling Law" style="width:100%; max-width:1200px;">
+      </div>
+    </div>
+    <!--/ Experiment Results -->
+  </div>
+</section>
+
+
 
 
 <!-- <section class="section" id="BibTeX">
