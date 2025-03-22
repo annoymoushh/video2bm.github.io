@@ -34,6 +34,16 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <style>
+    .container.is-custom-width {
+      max-width: 100%; /* Override Bulma's default max-width */
+      padding: 0 2rem;
+    }
+    figure img {
+      max-width: 100%; /* Ensure the image scales correctly */
+    }
+  </style>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -169,7 +179,7 @@
 </section> -->
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-custom-width">
     <!-- Teaser Image -->
     <div class="columns is-centered">
       <div class="container">
