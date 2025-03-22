@@ -210,58 +210,78 @@
 
     <h2 class="title is-3"><strong>Retry Phenomenon Example</strong></h2>
       
-      <!-- Pagination Container -->
-      <div id="video-pagination" class="columns is-centered">
-        <!-- Page 1 -->
-        <div class="column is-half" id="page-1">
-          <div class="columns is-centered">
-            <!-- With Video2BM -->
-            <div class="column is-half">
-              <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
-                <source src="./static/videos/success_example.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p><strong>With Video2BM</strong></p>
+      <div class="box m-5">
+        <div id="retry-carousel" class="carousel results-carousel">
+          <!-- Page 1 -->
+          <div class="content has-text-centered">
+            <div class="columns is-centered">
+              <!-- With Video2BM -->
+              <div class="column is-half">
+                <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
+                  <source src="./static/videos/success_example.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p><strong>With Video2BM</strong></p>
+              </div>
+              <!-- Without Video2BM -->
+              <div class="column is-half">
+                <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
+                  <source src="./static/videos/fail_example.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p><strong>Without Video2BM</strong></p>
+              </div>
             </div>
-            <!-- Without Video2BM -->
-            <div class="column is-half">
-              <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
-                <source src="./static/videos/fail_example.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p><strong>Without Video2BM</strong></p>
+          </div>
+      
+          <!-- Page 2 -->
+          <div class="content has-text-centered" style="display: none;">
+            <div class="columns is-centered">
+              <!-- Groceries Success -->
+              <div class="column is-half">
+                <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
+                  <source src="./static/videos/groceriessuccess.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p><strong>Groceries Success</strong></p>
+              </div>
+              <!-- Groceries Failure -->
+              <div class="column is-half">
+                <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
+                  <source src="./static/videos/groceries_failure.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p><strong>Groceries Failure</strong></p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Page 2 -->
-        <div class="column is-half" id="page-2" style="display: none;">
-          <div class="columns is-centered">
-            <!-- Groceries Success -->
-            <div class="column is-half">
-              <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
-                <source src="./static/videos/groceriessuccess.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p><strong>Groceries Success</strong></p>
-            </div>
-            <!-- Groceries Failure -->
-            <div class="column is-half">
-              <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
-                <source src="./static/videos/groceries_failure.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p><strong>Groceries Failure</strong></p>
-            </div>
-          </div>
+      
+        <!-- Pagination Controls -->
+        <div class="pagination is-centered" role="navigation" aria-label="pagination">
+          <button class="pagination-previous" onclick="changePage(-1)">Previous</button>
+          <button class="pagination-next" onclick="changePage(1)">Next</button>
         </div>
       </div>
-
-      <!-- Pagination Controls -->
-      <div class="pagination is-centered" role="navigation" aria-label="pagination">
-        <button class="pagination-previous" onclick="changePage(-1)">Previous</button>
-        <button class="pagination-next" onclick="changePage(1)">Next</button>
-      </div>
+      
+      <!-- JavaScript for Pagination -->
+      <script>
+        let currentPage = 1;
+      
+        function changePage(step) {
+          // Hide all pages
+          const pages = document.querySelectorAll('#retry-carousel > .content');
+          pages.forEach(page => page.style.display = 'none');
+      
+          // Update current page
+          currentPage += step;
+          if (currentPage < 1) currentPage = pages.length; // Wrap around to last page
+          if (currentPage > pages.length) currentPage = 1; // Wrap around to first page
+      
+          // Show the current page
+          pages[currentPage - 1].style.display = 'block';
+        }
+      </script>
 
     
     <!-- Method Image -->
