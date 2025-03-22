@@ -250,32 +250,7 @@
           </div>
         </div>
       </div>
-    
-      <!-- Pagination Controls -->
-      <div class="pagination is-centered" role="navigation" aria-label="pagination">
-        <button type="button" class="pagination-previous" onclick="changePage(-1)">Previous</button>
-        <button type="button" class="pagination-next" onclick="changePage(1)">Next</button>
-      </div>
     </div>
-    
-    <!-- JavaScript for Pagination -->
-    <script>
-      let currentPage = 1;
-    
-      function changePage(step) {
-        // Hide all pages
-        const pages = document.querySelectorAll('#retry-carousel > .content');
-        pages.forEach(page => page.style.display = 'none');
-    
-        // Update current page
-        currentPage += step;
-        if (currentPage < 1) currentPage = pages.length; // Wrap around to last page
-        if (currentPage > pages.length) currentPage = 1; // Wrap around to first page
-    
-        // Show the current page
-        pages[currentPage - 1].style.display = 'block';
-      }
-    </script>
 
     
     <!-- Method Image -->
