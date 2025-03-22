@@ -215,7 +215,6 @@
         <!-- Page 1 -->
         <div class="content has-text-centered">
           <div class="columns is-centered">
-            <!-- With Video2BM -->
             <div class="column is-half">
               <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
                 <source src="./static/videos/success_example.mp4" type="video/mp4">
@@ -223,7 +222,6 @@
               </video>
               <p><strong>With Video2BM</strong></p>
             </div>
-            <!-- Without Video2BM -->
             <div class="column is-half">
               <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
                 <source src="./static/videos/fail_example.mp4" type="video/mp4">
@@ -237,21 +235,19 @@
         <!-- Page 2 -->
         <div class="content has-text-centered" style="display: none;">
           <div class="columns is-centered">
-            <!-- Groceries Success -->
             <div class="column is-half">
               <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
                 <source src="./static/videos/groceries_success.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <p><strong>Groceries Success</strong></p>
+              <p><strong>With Video2BM</strong></p>
             </div>
-            <!-- Groceries Failure -->
             <div class="column is-half">
               <video controls autoplay muted loop playsinline style="width:100%; max-width:400px;">
                 <source src="./static/videos/groceries_failure.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <p><strong>Groceries Failure</strong></p>
+              <p><strong>Without Video2BM</strong></p>
             </div>
           </div>
         </div>
@@ -259,8 +255,8 @@
     
       <!-- Pagination Controls -->
       <div class="pagination is-centered" role="navigation" aria-label="pagination">
-        <button class="pagination-previous" onclick="changePage(-1)">Previous</button>
-        <button class="pagination-next" onclick="changePage(1)">Next</button>
+        <button type="button" class="pagination-previous" onclick="changePage(-1)">Previous</button>
+        <button type="button" class="pagination-next" onclick="changePage(1)">Next</button>
       </div>
     </div>
     
